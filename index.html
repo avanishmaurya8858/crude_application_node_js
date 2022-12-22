@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <title>form </title>
+</head>
+
+<body class="p-5">
+  <!-- <form action="" id="firstname" > First name </form> -->
+  <label for="sub">First Name:</label><br />
+  <input type="text" class="form-control" id="firstname" /> 
+
+  <!-- <form action="" id="firstname" > last name </form> -->
+  <label for="sub">Last Name:</label><br />
+  <input type="text" class="form-control" id="lastname" /> 
+
+  <!-- <form action="" id="firstname" > Eamil </form> -->
+  <label for="sub">Email:</label><br />
+  <input type="text" class="form-control" id="email" />
+  <!-- <form action="" id="firstname" > address </form> -->
+  <label for="sub">Address:</label><br />
+  <input type="text" class="form-control" id="address" placeholder="vill ,   district,  state " /> 
+
+
+  <button type="submit" id="sub" class="btn btn-primary" onClick="submitdata()"> submit  </button>
+
+ 
+  <h2 class="">Data Tables</h2>
+  <table class="table p-5">
+    <thead>
+      <th>First Name</th>
+      <th>last name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Option Edit</th>
+      <th>Delete</th>
+      <th colspan="2">Action</th>
+    </thead>
+    <tbody id="tableData"></tbody>
+  </table>
+
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">EDIT title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label for="sub">First Name:</label><br />
+          <input type="text" id="editfirstname" placeholder="Enter first name " /><br />
+
+          <label for="sub">Last Name:</label><br />
+          <input type="text" id="editlastname" placeholder="Enter last name " /><br />
+
+          <label for="sub">Email:</label><br />
+          <input type="text" id="editemail" placeholder="Enter email " /><br />
+
+          <label for="sub">Address:</label><br />
+          <input type="text" id="editaddress" placeholder="Enter address " /><br />
+          <button type="submit" id="sub" class="btn btn-primary" onClick="submitFormEdit()"> submit </button>
+        </div>
+          
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h4> delete the rows of table with the given first name</h4>
+  <label for="sub">first name</label><br />
+  <input type="text" id="FIRSTNAME" placeholder="Enter first name " /><br />
+  <button type="submit" id="sub" class="btn btn-primary" onClick="deleteForm()"> delete  </button>
+
+   <script src="index.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+</body>
+
+</html>
